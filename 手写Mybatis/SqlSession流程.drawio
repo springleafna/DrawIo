@@ -23,18 +23,21 @@
     </mxGraphModel>
   </diagram>
   <diagram id="XHuNUbOCb2vzDU8JY75y" name="第 2 页">
-    <mxGraphModel dx="919" dy="634" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="634" dy="437" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="SZ50tlm5Sv0XsGTRN-HV-1" value="1.继承Interceptor，在类上添加注解表面哪个类、哪个方法、哪些参数，并重写intercept方法，实现责任链的逻辑" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="SZ50tlm5Sv0XsGTRN-HV-1" value="1.继承Interceptor，在类上添加注解表面哪个类、哪个方法、哪些参数，并重写intercept方法，实现责任链的逻辑" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="110" y="80" width="620" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SZ50tlm5Sv0XsGTRN-HV-2" value="2.在mybatis-config.xml中使用&amp;lt;plugins&amp;gt;标签声明所用的插件" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="SZ50tlm5Sv0XsGTRN-HV-2" value="2.在mybatis-config.xml中使用&amp;lt;plugins&amp;gt;标签声明所用的插件" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="110" y="110" width="340" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SZ50tlm5Sv0XsGTRN-HV-3" value="mybatis初始化时会通过XMLConfigBuilder.pluginElement()方法解析mybatis-config.xml配置文件中定义的＜plugin＞节点，&lt;div&gt;后将Interceptor对象添加到Configuration.interceptorChain字段中保存&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="SZ50tlm5Sv0XsGTRN-HV-3" value="mybatis初始化时会通过XMLConfigBuilder.pluginElement()方法解析mybatis-config.xml配置文件中定义的＜plugin＞节点，&lt;div&gt;后将Interceptor对象添加到Configuration.interceptorChain字段中保存&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="85" y="170" width="670" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZbfchWvFt4GxxZxj1wMr-1" value="InterceptorChain会调用其中的pluginAll()方法，遍历每一个责任节点并调用每个节点的plugin(target)方法执行" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="250" width="600" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
