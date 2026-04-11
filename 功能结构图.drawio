@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="第 1 页" id="BALqSFQUhwX2yLOm-Oz6">
+    <mxGraphModel dx="1639" dy="1057" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="root_node" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=16;" value="功能结构" vertex="1">
+          <mxGeometry height="40" width="120" x="750" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="node_admin" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;" value="管理员" vertex="1">
+          <mxGeometry height="40" width="120" x="530" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="node_user" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;" value="普通用户" vertex="1">
+          <mxGeometry height="40" width="120" x="970" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_root_admin" edge="1" parent="1" source="root_node" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="node_admin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_root_user" edge="1" parent="1" source="root_node" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="node_user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="用&lt;br&gt;户&lt;br&gt;管&lt;br&gt;理" vertex="1">
+          <mxGeometry height="180" width="40" x="450" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="意&lt;br&gt;图&lt;br&gt;树&lt;br&gt;管&lt;br&gt;理" vertex="1">
+          <mxGeometry height="180" width="40" x="510" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="笔&lt;br&gt;记&lt;br&gt;管&lt;br&gt;理" vertex="1">
+          <mxGeometry height="180" width="40" x="570" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="计&lt;br&gt;划&lt;br&gt;管&lt;br&gt;理" vertex="1">
+          <mxGeometry height="180" width="40" x="630" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="知&lt;br&gt;识&lt;br&gt;库&lt;br&gt;管&lt;br&gt;理" vertex="1">
+          <mxGeometry height="180" width="40" x="690" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="ea1" edge="1" parent="1" source="node_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea2" edge="1" parent="1" source="node_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea3" edge="1" parent="1" source="node_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="a3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea4" edge="1" parent="1" source="node_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="a4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea5" edge="1" parent="1" source="node_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="a5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="控&lt;br&gt;制&lt;br&gt;台" vertex="1">
+          <mxGeometry height="180" width="40" x="770" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="u2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="我&lt;br&gt;的&lt;br&gt;计&lt;br&gt;划" vertex="1">
+          <mxGeometry height="180" width="40" x="830" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="u3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="每&lt;br&gt;日&lt;br&gt;清&lt;br&gt;单" vertex="1">
+          <mxGeometry height="180" width="40" x="890" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="u4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="四&lt;br&gt;象&lt;br&gt;限&lt;br&gt;分&lt;br&gt;析" vertex="1">
+          <mxGeometry height="180" width="40" x="950" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="u5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="思&lt;br&gt;维&lt;br&gt;笔&lt;br&gt;记" vertex="1">
+          <mxGeometry height="180" width="40" x="1010" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="u6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="灵&lt;br&gt;感&lt;br&gt;便&lt;br&gt;签" vertex="1">
+          <mxGeometry height="180" width="40" x="1070" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="u7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="知&lt;br&gt;识&lt;br&gt;库" vertex="1">
+          <mxGeometry height="180" width="40" x="1130" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="u8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="AI&lt;br&gt;对&lt;br&gt;话" vertex="1">
+          <mxGeometry height="180" width="40" x="1190" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="u9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=none;fontSize=14;spacingTop=10;" value="设&lt;br&gt;置" vertex="1">
+          <mxGeometry height="180" width="40" x="1250" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="eu1" edge="1" parent="1" source="node_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="u1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu2" edge="1" parent="1" source="node_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="u2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu3" edge="1" parent="1" source="node_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="u3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu4" edge="1" parent="1" source="node_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="u4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu5" edge="1" parent="1" source="node_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="u5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu6" edge="1" parent="1" source="node_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="u6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu7" edge="1" parent="1" source="node_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="u7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu8" edge="1" parent="1" source="node_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="u8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu9" edge="1" parent="1" source="node_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;endArrow=none;endFill=0;" target="u9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
