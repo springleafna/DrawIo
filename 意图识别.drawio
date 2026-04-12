@@ -1,0 +1,139 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="第 1 页" id="BALqSFQUhwX2yLOm-Oz6">
+    <mxGraphModel dx="1147" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n_start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="&lt;b&gt;用户发起提问&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="520" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="n_intent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="大模型分析并&lt;br&gt;进行意图识别" vertex="1">
+          <mxGeometry height="60" width="160" x="520" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n_router" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;fontStyle=1" value="判断所属的&lt;br&gt;意图类型？" vertex="1">
+          <mxGeometry height="80" width="180" x="510" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="n_sys_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="将提问进行向量化" vertex="1">
+          <mxGeometry height="60" width="160" x="70" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="n_sys_2" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="检索系统向量库&lt;br&gt;(获取相关分片)" vertex="1">
+          <mxGeometry height="70" width="140" x="80" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="n_sys_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="将检索到的分片&lt;br&gt;进行重排序 (Rerank)" vertex="1">
+          <mxGeometry height="60" width="160" x="70" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="n_usr_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="根据描述判断并&lt;br&gt;匹配目标知识库" vertex="1">
+          <mxGeometry height="60" width="160" x="370" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="n_usr_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="将提问进行向量化" vertex="1">
+          <mxGeometry height="60" width="160" x="370" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="VtxbxBCagjasCKUqnKAE-3" edge="1" parent="1" source="n_usr_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" target="VtxbxBCagjasCKUqnKAE-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n_usr_3" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;fontSize=13;strokeWidth=2;" value="检索用户向量库&lt;br&gt;(根据kb_id和user_id筛选)" vertex="1">
+          <mxGeometry height="70" width="160" x="370" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="n_tool_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="执行 MCP 工具调用" vertex="1">
+          <mxGeometry height="60" width="160" x="670" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="n_tool_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="获取并封装&lt;br&gt;工具返回的结果" vertex="1">
+          <mxGeometry height="60" width="160" x="670" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="n_chat_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="跳过检索与工具&lt;br&gt;直接加载预设提示词" vertex="1">
+          <mxGeometry height="60" width="160" x="970" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="n_llm_gen" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="&lt;b&gt;大模型结合上下文/检索分片/工具结果&lt;br&gt;生成最终回答&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="450" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="n_end" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="&lt;b&gt;返回输出结果&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="520" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="e_start_intent" edge="1" parent="1" source="n_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;" target="n_intent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_intent_router" edge="1" parent="1" source="n_intent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;" target="n_router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r_sys" edge="1" parent="1" source="n_router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;labelBackgroundColor=#ffffff;" target="n_sys_1" value="&lt;b&gt;系统相关意图&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="340" />
+              <mxPoint x="150" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_sys1_sys2" edge="1" parent="1" source="n_sys_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;" target="n_sys_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sys2_sys3" edge="1" parent="1" source="n_sys_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;" target="n_sys_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sys_gen" edge="1" parent="1" source="n_sys_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="n_llm_gen">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="805" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_r_usr" edge="1" parent="1" source="n_router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;labelBackgroundColor=#ffffff;" target="n_usr_1" value="&lt;b&gt;用户知识库意图&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="340" />
+              <mxPoint x="450" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_usr1_usr2" edge="1" parent="1" source="n_usr_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;" target="n_usr_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_usr2_usr3" edge="1" parent="1" source="n_usr_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;" target="n_usr_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r_tool" edge="1" parent="1" source="n_router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;labelBackgroundColor=#ffffff;" target="n_tool_1" value="&lt;b&gt;工具调用意图&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="340" />
+              <mxPoint x="750" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_tool1_tool2" edge="1" parent="1" source="n_tool_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;" target="n_tool_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tool_gen" edge="1" parent="1" source="n_tool_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="n_llm_gen">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="730" />
+              <mxPoint x="675" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_r_chat" edge="1" parent="1" source="n_router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;labelBackgroundColor=#ffffff;" target="n_chat_1" value="&lt;b&gt;打招呼/问候意图&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="340" />
+              <mxPoint x="1050" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_chat_gen" edge="1" parent="1" source="n_chat_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="n_llm_gen">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="805" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_gen_end" edge="1" parent="1" source="n_llm_gen" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;" target="n_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VtxbxBCagjasCKUqnKAE-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;strokeWidth=2;" value="将检索到的分片&lt;br&gt;进行重排序 (Rerank)" vertex="1">
+          <mxGeometry height="60" width="160" x="370" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="VtxbxBCagjasCKUqnKAE-8" edge="1" parent="1" source="VtxbxBCagjasCKUqnKAE-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.394;entryY=0.043;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" target="n_llm_gen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
