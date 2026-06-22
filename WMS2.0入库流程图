@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="第 1 页" id="LzOacpBsAqJtY22ZKZXw">
+    <mxGraphModel dx="948" dy="617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" value="&lt;b&gt;开始入库&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="360" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="master_data" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666;align=center;spacingLeft=10;" value="&lt;b&gt;前置准备：维护商品基础资料&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left; margin-top: 5px;&quot;&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;• 商品分类 (定义层级)&lt;br&gt;• 控制属性 (整件ABC/拆零ABC/效期等)&lt;br&gt;• 包装资料 (层级/单位/换算/体积重量)&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="540" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="create" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;" value="&lt;b&gt;1. 创建入库单&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;制定入库计划&lt;br&gt;包含商品明细及数量/单位&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;" value="&lt;b&gt;2. 入库单审核&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;确认计划有效&lt;br&gt;审核通过后才可进行实际收货&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="receive" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=10;" value="&lt;b&gt;3. 入库收货&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;确认实际到货情况&lt;br&gt;将商品组盘并绑定收货容器&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="cancel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;dashed=1;" value="&lt;b&gt;异常: 收货取消 / 容器取消&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;取消单笔记录或整个容器收货&lt;br&gt;解绑实物，回退待收数量&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="60" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="decision_container" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;b&gt;勾选/触发&lt;br&gt;容器关闭?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="140" x="340" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="continue_receive" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;未满载/未关闭&lt;br&gt;容器可继续绑定新商品&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="520" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="qa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=10;" value="&lt;b&gt;4. 质量验收 (质检)&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;按容器对已收货商品检查：&lt;br&gt;数量/批次/效期/损坏情况&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="decision_qa" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;b&gt;验收结果&lt;br&gt;是否合格?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="140" x="340" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="unqualified" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;" value="&lt;b&gt;异常处理区&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;退货 / 隔离 / 报损&lt;br&gt;(当前业务流暂存区)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="580" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="putaway" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;" value="&lt;b&gt;5. 入库上架&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;参考整件ABC/拆零ABC策略&lt;br&gt;将容器放入正式物理库位&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" value="&lt;b&gt;结束&lt;br&gt;&lt;font size=&quot;1&quot;&gt;(形成可用库存)&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="120" x="350" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_master_create" edge="1" parent="1" source="master_data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#666666;dashed=1;" target="create">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_start_create" edge="1" parent="1" source="start" target="create">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_create_audit" edge="1" parent="1" source="create" target="audit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_audit_receive" edge="1" parent="1" source="audit" target="receive">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_receive_decision" edge="1" parent="1" source="receive" target="decision_container">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_receive_cancel" edge="1" parent="1" source="receive" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#b85450;dashed=1;" target="cancel" value="&lt;font color=&quot;#b85450&quot;&gt;操作失误/取消&lt;/font&gt;">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_cancel_receive" edge="1" parent="1" source="cancel" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#b85450;dashed=1;" target="receive" value="&lt;font color=&quot;#b85450&quot;&gt;回退状态&lt;/font&gt;">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="150" y="290" />
+              <mxPoint x="410" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_container_no" edge="1" parent="1" source="decision_container" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontColor=#d6b656;strokeColor=#d6b656;" target="receive" value="&lt;b color=&quot;#d6b656&quot;&gt;否 (未关闭)&lt;/b&gt;">
+          <mxGeometry relative="1" x="-0.85" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="550" y="460" />
+              <mxPoint x="550" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_container_yes" edge="1" parent="1" source="decision_container" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontColor=#6c8ebf;strokeColor=#6c8ebf;" target="qa" value="&lt;b color=&quot;#6c8ebf&quot;&gt;是 (已关闭容器)&lt;/b&gt;">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_qa_decision" edge="1" parent="1" source="qa" target="decision_qa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_qa_no" edge="1" parent="1" source="decision_qa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontColor=#b85450;strokeColor=#b85450;" target="unqualified" value="&lt;b color=&quot;#b85450&quot;&gt;不合格部分&lt;/b&gt;">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_qa_yes" edge="1" parent="1" source="decision_qa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontColor=#82b366;strokeColor=#82b366;" target="putaway" value="&lt;b color=&quot;#82b366&quot;&gt;合格部分&lt;/b&gt;">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_putaway_end" edge="1" parent="1" source="putaway" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
