@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net">
+<mxfile host="app.diagrams.net" pages="2">
   <diagram name="第 1 页" id="LzOacpBsAqJtY22ZKZXw">
     <mxGraphModel dx="948" dy="617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -104,6 +104,112 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="edge_putaway_end" edge="1" parent="1" source="putaway" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="lFJy3ywwFnyJs55Bk5Ua" name="第 2 页">
+    <mxGraphModel dx="1138" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" value="&lt;b&gt;开始出库&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="360" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="create" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;" value="&lt;b&gt;1. 创建出库单&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;记录出库计划&lt;br&gt;(可指定供应商批号锁定库存)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;" value="&lt;b&gt;2. 出库单审核&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;审核通过并进行库存预占&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="wave" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;" value="&lt;b&gt;3. 波次创建与执行&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;合并多出库单提高效率&lt;br&gt;转化为具体的拣选任务/单据&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="decision" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;仓库物理形态?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="330" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="flat_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=10;" value="&lt;b&gt;平库: PDA 索取与单据锁定&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;分配给当前用户&lt;br&gt;防多名作业员抢单重复拣货&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="120" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="flat_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=10;" value="&lt;b&gt;平库: 人工拣选&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;去提示库位拿取指定商品数量&lt;br&gt;并在 PDA 确认&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="120" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="flat_3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=10;" value="&lt;b&gt;平库: 系统库存扣减&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;完成拣选动作&lt;br&gt;系统实际扣减物理库位库存&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="120" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="asrs_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=10;" value="&lt;b&gt;立库: WMS下发指令&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;不再生成人工PDA拣选单&lt;br&gt;向WCS发送出库请求&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="520" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="asrs_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=10;" value="&lt;b&gt;立库: WCS 调度设备&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;指挥堆垛机 / AGV小车 / 输送线&lt;br&gt;执行物理取出动作&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="520" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="asrs_3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=10;" value="&lt;b&gt;立库: 自动出库送达&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;将指定托盘或料箱&lt;br&gt;自动送至出库口(接驳台)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="520" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="review" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;" value="&lt;b&gt;4. 复核作业&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;扫描商品条码校验：&lt;br&gt;SKU是否正确 / 数量 / 批号匹配&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="assemble" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;" value="&lt;b&gt;5. 集货&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;按出库单、线路或承运商&lt;br&gt;进行物理空间的集中暂存分类&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="ship" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;" value="&lt;b&gt;6. 发运&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#666666&quot;&gt;货物装车离开仓库&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" value="&lt;b&gt;结束&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="360" y="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_start_create" edge="1" parent="1" source="start" target="create">
+          <mxGeometry relative="1" as="geometry" />
+          <mxPath as="path">
+            <mxPoint x="410" y="80" as="sourcePoint" />
+            <mxPoint x="410" y="120" as="targetPoint" />
+          </mxPath>
+        </mxCell>
+        <mxCell id="edge_create_audit" edge="1" parent="1" source="create" target="audit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_audit_wave" edge="1" parent="1" source="audit" target="wave">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_wave_decision" edge="1" parent="1" source="wave" target="decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_decision_flat1" edge="1" parent="1" source="decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontColor=#9673a6;strokeColor=#9673a6;" target="flat_1" value="&lt;b color=&quot;#9673a6&quot;&gt;平库（人工库）&lt;/b&gt;">
+          <mxGeometry relative="1" x="-0.4" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_decision_asrs1" edge="1" parent="1" source="decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontColor=#d79b00;strokeColor=#d79b00;" target="asrs_1" value="&lt;b color=&quot;#d79b00&quot;&gt;立库（自动化库）&lt;/b&gt;">
+          <mxGeometry relative="1" x="-0.4" y="-20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_flat1_flat2" edge="1" parent="1" source="flat_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9673a6;" target="flat_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_flat2_flat3" edge="1" parent="1" source="flat_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9673a6;" target="flat_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_asrs1_asrs2" edge="1" parent="1" source="asrs_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d79b00;" target="asrs_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_asrs2_asrs3" edge="1" parent="1" source="asrs_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d79b00;" target="asrs_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_flat3_review" edge="1" parent="1" source="flat_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9673a6;" target="review">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_asrs3_review" edge="1" parent="1" source="asrs_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d79b00;" target="review">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_review_assemble" edge="1" parent="1" source="review" target="assemble">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_assemble_ship" edge="1" parent="1" source="assemble" target="ship">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_ship_end" edge="1" parent="1" source="ship" target="end">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
